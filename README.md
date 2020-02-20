@@ -1,2 +1,3 @@
 # docker-ce-build
-Repo that contains the Travis recipe to build docker-ce
+
+A script to automate docker-ce's repository build on power
