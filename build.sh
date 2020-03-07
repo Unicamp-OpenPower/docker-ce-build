@@ -12,5 +12,5 @@ cd $home/$dir
 sudo VERSION=0.0.0-dev make $sys
 
 printf "\n\n=========> [CHECKING <$sys> PACKAGES] >>>\n"
+sudo chown -777 $home_dir/$bin_dir/*
 ls $home/$bin_dir
-sudo rm -rf $home_dir/$bin_dir
