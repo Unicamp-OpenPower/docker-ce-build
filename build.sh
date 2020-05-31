@@ -4,8 +4,11 @@ home=$(pwd)
 
 printf "\n\n=========> [CLONNING MASTER AND PATCHING] >>>\n"
 git clone https://github.com/docker/docker-ce
+git config --global user.name "Vinicius Espindola"
+git config --global user.email "vini.couto.e@gmail.com"
+python3 patch.py
 cd $home/docker-ce
-git am --3way ../patches/*
+git add . && git commit -m "using community containerd versions"
 
 printf "\n\n=========> [BUILDING <$sys> PACKAGES] >>>\n"
 cd $home/$dir
