@@ -9,6 +9,7 @@ git config --global user.email "vini.couto.e@gmail.com"
 python3 patch.py
 cd $home/docker-ce
 git add . && git commit -m "using community containerd versions"
+sudo make static DOCKER_BUILD_PKGS=static-linux
 
 printf "\n\n=========> [BUILDING <$sys> PACKAGES] >>>\n"
 cd $home/$dir
