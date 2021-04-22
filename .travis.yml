@@ -3,7 +3,7 @@ arch: ppc64le
 sudo: required
 language: shell
 dist: focal
-#service: docker
+service: docker
 
 #jobs:
 #  include:
@@ -20,8 +20,8 @@ before_install:
   - wget https://oplab9.parqtec.unicamp.br/pub/key/openpower-gpgkey-public.asc
   - sudo apt-key add openpower-gpgkey-public.asc
   - sudo apt-get update
-  - sudo apt-get -y install cgroupfs-mount containerd  pigz runc docker-ce-cli docker-ce
-  - sudo apt-get -y install docker-ce
+  - sudo apt-get -y install cgroupfs-mount containerd  pigz runc # docker-ce-cli docker-ce
+  #- sudo apt-get -y install docker-ce
 
 script:
   - bash build.sh
