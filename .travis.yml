@@ -12,8 +12,8 @@ language: shell
 
 before_install:
   - sudo apt update
-  - sudo apt -y install build-essential zip unzip python3 sudo apt make
-  - sudo su
+  - sudo apt -y install build-essential python3 make
+  #- sudo su
   - printf "deb https://oplab9.parqtec.unicamp.br/pub/repository/debian/ ./\n" >> /etc/apt/sources.list
   - wget https://oplab9.parqtec.unicamp.br/pub/key/openpower-gpgkey-public.asc
   - sudo apt-key add openpower-gpgkey-public.asc
