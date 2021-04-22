@@ -21,7 +21,7 @@ before_install:
   - sudo apt-key add openpower-gpgkey-public.asc
   - sudo apt-get update
   - sudo apt-get -y install cgroupfs-mount containerd  pigz runc # docker-ce-cli docker-ce
-  - sudo service docker restart
+  #- sudo service docker restart
   - sudo docker login -u $DOCKERHUB -p $DOCKERPASS
   #- sudo apt-get -y install docker-ce
 
