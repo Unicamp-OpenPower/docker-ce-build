@@ -2,7 +2,7 @@ os: linux
 arch: ppc64le
 sudo: required
 language: shell
-service: docker
+#service: docker
 
 #jobs:
 #  include:
