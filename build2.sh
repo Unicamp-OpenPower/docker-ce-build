@@ -12,9 +12,10 @@ wget https://raw.githubusercontent.com/Unicamp-OpenPower/docker-ce-build/master/
 
 cd cli
 git checkout v$git_ver
-git config --global user.name "Your Name"
-git config --global user.email "user@example.com"
-git add . && git commit -m "using community containerd versions"
+cd ..
+
+cd moby
+git checkout v$git_ver
 cd ..
 
 python3 patch2.py
