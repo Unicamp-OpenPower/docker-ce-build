@@ -20,6 +20,7 @@ before_install:
   - wget https://oplab9.parqtec.unicamp.br/pub/key/openpower-gpgkey-public.asc
   - sudo apt-key add openpower-gpgkey-public.asc
   - sudo apt update
+  - sudo apt -y install cgroupfs-mount containerd  pigz runc docker-ce-cli docker-ce
   - sudo apt -y install docker-ce
 
 script:
