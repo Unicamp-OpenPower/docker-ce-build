@@ -3,6 +3,11 @@ sys="ubuntu-focal"
 git_ver="20.10.6"
 
 sudo apt -y install make
+printf "deb https://oplab9.parqtec.unicamp.br/pub/repository/debian/ ./\n" >> /etc/apt/sources.list
+wget https://oplab9.parqtec.unicamp.br/pub/key/openpower-gpgkey-public.asc
+sudo apt-key add openpower-gpgkey-public.asc
+sudo apt-get update
+sudo apt-get -y install docker-ce
 
 git clone https://github.com/docker/cli.git
 git clone https://github.com/moby/moby.git
