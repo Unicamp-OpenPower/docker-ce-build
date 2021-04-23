@@ -11,7 +11,7 @@ git clone https://github.com/docker/cli.git
 git clone https://github.com/moby/moby.git
 git clone https://github.com/docker/scan-cli-plugin.git
 git clone https://github.com/docker/docker-ce-packaging.git
-wget https://raw.githubusercontent.com/Unicamp-OpenPower/docker-ce-build/master/patch2.py
+#wget https://raw.githubusercontent.com/Unicamp-OpenPower/docker-ce-build/master/patch2.py
 
 #cd cli
 #git checkout v$git_ver
@@ -21,7 +21,7 @@ wget https://raw.githubusercontent.com/Unicamp-OpenPower/docker-ce-build/master/
 #git checkout v$git_ver
 #cd ..
 
-python3 patch2.py
+python3 patch.py
 mkdir -p docker-ce-packaging/src/github.com/docker/cli
 mkdir -p docker-ce-packaging/src/github.com//docker/docker
 mkdir -p docker-ce-packaging/src/github.com/docker/scan-cli-plugin
@@ -30,7 +30,7 @@ sudo cp -r cli/* docker-ce-packaging/src/github.com/docker/cli
 sudo cp -r moby/* docker-ce-packaging/src/github.com/docker/docker
 sudo cp -r scan-cli-plugin/* docker-ce-packaging/src/github.com/docker/scan-cli-plugin
 
-cd docker-ce-packaging/deb
-sudo VERSION=$git_ver make $sys
-cd debbuild/$sys
+cd $dir
+sudo make $sys
+cd && cd $bin_dir
 ls
