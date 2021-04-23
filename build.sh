@@ -1,5 +1,4 @@
 #!/bin/bash
-git_ver="0.0.0-dev"
 
 sudo apt -y install make
 printf "deb https://oplab9.parqtec.unicamp.br/pub/repository/debian/ ./\n" >> /etc/apt/sources.list
@@ -14,13 +13,13 @@ git clone https://github.com/docker/scan-cli-plugin.git
 git clone https://github.com/docker/docker-ce-packaging.git
 wget https://raw.githubusercontent.com/Unicamp-OpenPower/docker-ce-build/master/patch2.py
 
-cd cli
-git checkout v$git_ver
-cd ..
+#cd cli
+#git checkout v$git_ver
+#cd ..
 
-cd moby
-git checkout v$git_ver
-cd ..
+#cd moby
+#git checkout v$git_ver
+#cd ..
 
 python3 patch2.py
 mkdir -p docker-ce-packaging/src/github.com/docker/cli
